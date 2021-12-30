@@ -61,7 +61,7 @@ func NewRunnerJob(k6 *v1alpha1.K6, index int) (*batchv1.Job, error) {
 
 	command = append(
 		command,
-		fmt.Sprintf("/test/%s", script.File),
+		fmt.Sprintf("//test//%s", script.File),
 		"--address=0.0.0.0:6565")
 
 	paused := true
